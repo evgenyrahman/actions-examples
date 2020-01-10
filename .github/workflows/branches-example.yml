@@ -3,7 +3,7 @@ name: Branches CI
 on: 
   push:
     branches:
-      - master
+      - '*'
 jobs:
   build:
 
