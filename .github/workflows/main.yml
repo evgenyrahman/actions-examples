@@ -29,6 +29,10 @@ jobs:
     # Runs a single command using the runners shell
     - name: echo the variable 
       run: echo $HELLO
+  
+    # Runs a single command using the runners shell
+    - name: echo the variable 
+      run: env
 
     # Runs a single command using the runners shell
     - name: change the variable 
