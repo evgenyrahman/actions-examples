@@ -32,7 +32,7 @@ jobs:
   
     # Runs a single command using the runners shell
     - name: list all enviornment variables
-      run: env
+      run: env | grep HELLO
 
     # Runs a single command using the runners shell
     - name: change the variable 
