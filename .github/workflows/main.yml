@@ -24,19 +24,19 @@ jobs:
 
     # Runs a single command using the runners shell
     - name: export a variable
-      run: export HELLO=hello
+      run: "::set-env name=HELLO::hello"
 
     # Runs a single command using the runners shell
     - name: echo the variable 
       run: echo $HELLO
   
     # Runs a single command using the runners shell
-    - name: echo the variable 
+    - name: list all enviornment variables
       run: env
 
     # Runs a single command using the runners shell
     - name: change the variable 
-      run: export HELLO=goodbye
+      run: "::set-env name=HELLO::goodbye"
 
     # Runs a single command using the runners shell
     - name: echo the variable 
