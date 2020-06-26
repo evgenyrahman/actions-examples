@@ -36,7 +36,7 @@ jobs:
 
     # Runs a single command using the runners shell
     - name: change the variable 
-      run: "::set-env name=HELLO::goodbye"
+      run: echo "::set-env name=HELLO::goodbye"
 
     # Runs a single command using the runners shell
     - name: echo the variable 
