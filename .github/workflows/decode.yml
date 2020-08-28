@@ -19,6 +19,12 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-     - run: |
-        echo ${{secrets.CERT}} | base64 -d
+    - name: Run Workflow
+      id: write_file
+      uses: timheuer/base64-to-file@v1.0.3
+      with:
+        fileName: 'temp.cert'
+        encodedString: ${{ secrets.CERT }}
+    - name: Some other step
+      run: |
+        cat ${{ steps.write_file.outputs.filePath }}
