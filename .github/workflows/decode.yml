@@ -24,4 +24,4 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Decode secret
-        run: base64 --decode {{ $secrets.CERT }}
+        run: echo {{ $secrets.CERT }} | base64 -D
