@@ -25,6 +25,9 @@ jobs:
       with:
         fileName: 'temp.cert'
         encodedString: ${{ secrets.CERT }}
-    - name: Some other step
+    - name: file output
       run: |
         cat ${{ steps.write_file.outputs.filePath }}
+    - name: plain cert file
+      run: |
+        echo ${{ secrets.PLAIN_CERT }} > temp2.cert
