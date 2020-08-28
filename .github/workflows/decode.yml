@@ -23,4 +23,4 @@ jobs:
      - shell: bash
        env:
          CERT: ${{ secrets.CERT }}
-       run: echo ${CERT} | base64 -d
+       run: echo ${CERT}
